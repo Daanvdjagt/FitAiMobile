@@ -7,11 +7,21 @@ class Welcome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(),
       appBar: AppBar(
         title: Text('FitAIMobile')
       ),
-      bottomNavigationBar: Navbar(),
+      drawer: Drawer(
+        child: ListView(children: <Widget>[
+          ListTile(
+            title: Text('Item 1'),
+            trailing: Icon(Icons.arrow_forward),
+          ),
+          ListTile(
+            title: Text('Item 2'),
+            trailing: Icon(Icons.arrow_forward),
+          )
+        ],),
+      ),
     );
   }
 }
