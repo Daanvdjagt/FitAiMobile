@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import '../navigator.dart';
+import '../navbar.dart';
 
 class Login extends StatelessWidget {
   static const String id = 'login_screen';
+  static const String title = "Login";
   @override
   Widget build(BuildContext context) {
     return Scaffold(

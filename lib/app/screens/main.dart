@@ -2,9 +2,11 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import './welcome.dart';
 import './login.dart';
+import './profile.dart';
 
 void main() => runApp(MyApp());
 
@@ -31,7 +33,8 @@ class MyHomePage extends StatefulWidget {
   Widget build(BuildContext context) {
     return MaterialApp(initialRoute: Welcome.id, routes:{
         Welcome.id: (context) => Welcome(),
-        Login.id: (context) => Login()
+        Login.id: (context) => Login(),
+        Profile.id: (context) => Profile(),
       });
   }
     

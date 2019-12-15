@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import './screens/welcome.dart';
 import './screens/login.dart';
+import './screens/profile.dart';
 
 
 // class Navbar extends StatelessWidget {
@@ -30,28 +31,39 @@ import './screens/login.dart';
 class Navbar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      drawer: Drawer(
+    return Drawer(
         child: ListView(
-          padding: EdgeInsets.zero,
           children: <Widget>[
-            DrawerHeader(
-              child: Text('Drawer header'),
-              decoration: BoxDecoration(
-                color: Colors.blue,
+            UserAccountsDrawerHeader(
+              accountName: Text("Ashish Rawat"),
+              accountEmail: Text("ashishrawat2911@gmail.com"),
+              currentAccountPicture: CircleAvatar(
+                backgroundColor:
+                    Theme.of(context).platform == TargetPlatform.iOS
+                        ? Colors.white
+                        : Colors.blue,
+                child: Text(
+                  "A",
+                  style: TextStyle(fontSize: 40.0),
+                ),
               ),
+              onDetailsPressed: () {
+                Navigator.pushNamed(context, Profile.id);
+              }
             ),
             ListTile(
-              title: Text('Item 1'),
+              title: Text(Welcome.title),
               trailing: Icon(Icons.arrow_forward),
+              onTap: () {
+                Navigator.pushNamed(context, Welcome.id);
+              },
             ),
             ListTile(
               title: Text('Item 2'),
               trailing: Icon(Icons.arrow_forward),
             )
           ],
-        )
-      ),
-    );
+        ),
+      );
   }
 }
