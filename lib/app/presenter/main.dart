@@ -4,7 +4,7 @@
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:fit_ai_mobile/app/screens/welcome.dart';
+import 'package:fit_ai_mobile/app/screens/home.dart';
 import 'package:fit_ai_mobile/app/screens/login.dart';
 import 'package:fit_ai_mobile/app/screens/profile.dart';
 import 'package:splashscreen/splashscreen.dart';
@@ -52,8 +52,8 @@ class AfterSplash extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-        child: MaterialApp(initialRoute: Welcome.id, routes: {
-          Welcome.id: (context) => Welcome(),
+        child: MaterialApp(initialRoute: Home.id, routes: {
+          Home.id: (context) => Home(),
           Login.id: (context) => Login(),
           Profile.id: (context) => Profile(),
         }),

@@ -1,33 +1,10 @@
 import 'package:flutter/material.dart';
-import './screens/welcome.dart';
+import './screens/home.dart';
 import './screens/login.dart';
 import './screens/profile.dart';
 import 'package:fit_ai_mobile/app/presenter/main.dart';
 import 'package:fit_ai_mobile/app/viewmodel/drawerstateinfo.dart';
 import 'package:provider/provider.dart';
-
-// class Navbar extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Container(
-//       color: Colors.red,
-//       child: Row(
-//         mainAxisAlignment: MainAxisAlignment.spaceAround,
-//         children: <Widget>[
-//           FlatButton(
-//               onPressed: () => Navigator.pop(context),
-//               child: Icon(Icons.arrow_left, color: Colors.white, size: 40)),
-//           FlatButton(
-//               onPressed: () => Navigator.pushNamed(context, Welcome.id),
-//               child: Icon(Icons.account_balance, color: Colors.white)),
-//           FlatButton(
-//               onPressed: () => Navigator.pushNamed(context, Login.id),
-//               child: Icon(Icons.sync, color: Colors.white)),
-//         ],
-//       ),
-//     );
-//   }
-// }
 
 class Navbar extends StatelessWidget {
   Navbar(this.currentPage);
@@ -46,9 +23,10 @@ class Navbar extends StatelessWidget {
                 backgroundColor: Colors.white,
                 child: Text(
                   "A",
-                  style: currentDrawer == 0
+                  style: currentDrawer == 1
                       ? TextStyle(fontSize: 40.0, fontWeight: FontWeight.bold)
-                      : TextStyle(fontSize: 40.0, fontWeight: FontWeight.normal),
+                      : TextStyle(
+                          fontSize: 40.0, fontWeight: FontWeight.normal),
                 ),
               ),
               onDetailsPressed: () {
@@ -61,8 +39,8 @@ class Navbar extends StatelessWidget {
                     builder: (BuildContext context) => Profile()));
               }),
           ListTile(
-            title: Text(Welcome.title,
-                style: currentDrawer == 1
+            title: Text(Home.title,
+                style: currentDrawer == 0
                     ? TextStyle(fontWeight: FontWeight.bold)
                     : TextStyle(fontWeight: FontWeight.normal)),
             trailing: Icon(Icons.arrow_forward),
@@ -73,7 +51,7 @@ class Navbar extends StatelessWidget {
               Provider.of<DrawerStateInfo>(context).setCurrentDrawer(1);
 
               Navigator.of(context).pushReplacement(MaterialPageRoute(
-                  builder: (BuildContext context) => Welcome()));
+                  builder: (BuildContext context) => Home()));
             },
           ),
           ListTile(
