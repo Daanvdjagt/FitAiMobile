@@ -57,8 +57,7 @@ class Navbar extends StatelessWidget {
               },
             ),
             ListTile(
-              title: Text('Item 2'),
-              trailing: Icon(Icons.arrow_forward),
+              title: Text('Version 0.1'),
             )
           ],
         ),
