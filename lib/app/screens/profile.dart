@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'dart:ui' as ui;
 import 'package:fit_ai_mobile/app/navbar.dart';
+import 'package:fit_ai_mobile/app/widgets/rowcell.dart';
 
 
 
@@ -69,9 +70,4 @@ class Profile extends StatelessWidget {
       )
     ],);
   }
-
-  Widget rowCell(int count, String type) => new Expanded(child: new Column(children: <Widget>[
-    new Text('$count',style: new TextStyle(color: Colors.white),),
-    new Text(type,style: new TextStyle(color: Colors.white, fontWeight: FontWeight.normal))
-  ],));
 }
