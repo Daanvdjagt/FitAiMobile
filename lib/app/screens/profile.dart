@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'dart:ui' as ui;
-import 'package:fit_ai_mobile/app/navbar.dart';
+import 'package:fit_ai_mobile/app/widgets/navbar.dart';
 import 'package:fit_ai_mobile/app/widgets/rowcell.dart';
 
 

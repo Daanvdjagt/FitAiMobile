@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import './screens/home.dart';
-import './screens/login.dart';
-import './screens/profile.dart';
+import 'package:fit_ai_mobile/app/screens/home.dart';
+import 'package:fit_ai_mobile/app/screens/login.dart';
+import 'package:fit_ai_mobile/app/screens/profile.dart';
 import 'package:fit_ai_mobile/app/presenter/main.dart';
 import 'package:fit_ai_mobile/app/viewmodel/drawerstateinfo.dart';
 import 'package:provider/provider.dart';
@@ -33,7 +33,7 @@ class Navbar extends StatelessWidget {
                 Navigator.of(context).pop();
                 if (this.currentPage == "Profile") return;
 
-                Provider.of<DrawerStateInfo>(context).setCurrentDrawer(0);
+                Provider.of<DrawerStateInfo>(context).setCurrentDrawer(1);
 
                 Navigator.of(context).pushReplacement(MaterialPageRoute(
                     builder: (BuildContext context) => Profile()));
@@ -48,7 +48,7 @@ class Navbar extends StatelessWidget {
               Navigator.of(context).pop();
               if (this.currentPage == "Home") return;
 
-              Provider.of<DrawerStateInfo>(context).setCurrentDrawer(1);
+              Provider.of<DrawerStateInfo>(context).setCurrentDrawer(0);
 
               Navigator.of(context).pushReplacement(MaterialPageRoute(
                   builder: (BuildContext context) => Home()));

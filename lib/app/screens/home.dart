@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fit_ai_mobile/app/navbar.dart';
+import 'package:fit_ai_mobile/app/widgets/navbar.dart';
 
 class Home extends StatelessWidget {
   static const String id = 'home_screen';

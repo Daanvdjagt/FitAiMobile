@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../navbar.dart';
+import 'package:fit_ai_mobile/app/widgets/navbar.dart';
 
 class Login extends StatelessWidget {
   static const String id = 'login_screen';
