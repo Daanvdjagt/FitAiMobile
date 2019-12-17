@@ -15,7 +15,7 @@ class Login extends StatelessWidget {
           child: Text('Go back!'),
         ),
       ),
-      drawer: Navbar(),
+      drawer: Navbar("Login"),
     );
   }
 }

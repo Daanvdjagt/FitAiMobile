@@ -35,7 +35,7 @@ class Profile extends StatelessWidget {
             elevation: 0.0,
             backgroundColor: Colors.transparent,
           ),
-          drawer: Navbar(),
+          drawer: Navbar("Profile"),
           backgroundColor: Colors.transparent,
           body: new Center(
             child: new Column(
