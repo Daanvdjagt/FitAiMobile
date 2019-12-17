@@ -35,13 +35,11 @@ class Navbar extends StatelessWidget {
         child: ListView(
           children: <Widget>[
             UserAccountsDrawerHeader(
-              accountName: Text("Ashish Rawat"),
-              accountEmail: Text("ashishrawat2911@gmail.com"),
+              accountName: Text("Jane Doe"),
+              accountEmail: Text("JaneDoe1995@gmail.com"),
               currentAccountPicture: CircleAvatar(
                 backgroundColor:
-                    Theme.of(context).platform == TargetPlatform.iOS
-                        ? Colors.white
-                        : Colors.blue,
+                    Colors.white,
                 child: Text(
                   "A",
                   style: TextStyle(fontSize: 40.0),
