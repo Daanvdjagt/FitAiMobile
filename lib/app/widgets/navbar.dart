@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fit_ai_mobile/app/screens/home.dart';
-import 'package:fit_ai_mobile/app/screens/login.dart';
 import 'package:fit_ai_mobile/app/screens/profile.dart';
-import 'package:fit_ai_mobile/app/presenter/main.dart';
 import 'package:fit_ai_mobile/app/viewmodel/drawerstateinfo.dart';
 import 'package:provider/provider.dart';
 
