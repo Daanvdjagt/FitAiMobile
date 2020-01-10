@@ -1,3 +1,4 @@
+import 'package:fit_ai_mobile/app/screens/home.dart';
 import 'package:flutter/material.dart';
 import 'package:fit_ai_mobile/app/widgets/custominputfield.dart';
 import 'package:fit_ai_mobile/app/widgets/navbar.dart';
@@ -55,7 +56,7 @@ class Login extends StatelessWidget {
                       width: 150,
                       child: RaisedButton(
                         onPressed: (){
-                           Navigator.push(context, MaterialPageRoute(builder: (context) => Login()));
+                           Navigator.push(context, MaterialPageRoute(builder: (context) => Home()));
                            },
                            color: Colors.deepOrange,
                            textColor: Colors.white,
