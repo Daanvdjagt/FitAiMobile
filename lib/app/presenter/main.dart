@@ -2,6 +2,7 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
+import 'package:fit_ai_mobile/app/screens/gopro.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:fit_ai_mobile/app/screens/home.dart';
@@ -56,6 +57,7 @@ class AfterSplash extends StatelessWidget {
           Home.id: (context) => Home(),
           Login.id: (context) => Login(),
           Profile.id: (context) => Profile(),
+          Gopro.id: (context) => Gopro(),
         }),
         providers: <SingleChildCloneableWidget>[
           ChangeNotifierProvider<DrawerStateInfo>(

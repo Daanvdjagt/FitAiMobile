@@ -1,3 +1,4 @@
+import 'package:fit_ai_mobile/app/screens/gopro.dart';
 import 'package:flutter/material.dart';
 import 'package:fit_ai_mobile/app/screens/home.dart';
 import 'package:fit_ai_mobile/app/screens/login.dart';
@@ -52,6 +53,22 @@ class Navbar extends StatelessWidget {
 
               Navigator.of(context).pushReplacement(MaterialPageRoute(
                   builder: (BuildContext context) => Home()));
+            },
+          ),
+          ListTile(
+            title: Text(Gopro.title,
+                style: currentDrawer == 0
+                    ? TextStyle(fontWeight: FontWeight.bold)
+                    : TextStyle(fontWeight: FontWeight.normal)),
+            trailing: Icon(Icons.arrow_forward),
+            onTap: () {
+              Navigator.of(context).pop();
+              if (this.currentPage == "Gopro") return;
+
+              Provider.of<DrawerStateInfo>(context).setCurrentDrawer(0);
+
+              Navigator.of(context).pushReplacement(MaterialPageRoute(
+                  builder: (BuildContext context) => Gopro()));
             },
           ),
           ListTile(
