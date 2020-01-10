@@ -52,7 +52,7 @@ class AfterSplash extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-        child: MaterialApp(initialRoute: Home.id, routes: {
+        child: MaterialApp(initialRoute: Login.id, routes: {
           Home.id: (context) => Home(),
           Login.id: (context) => Login(),
           Profile.id: (context) => Profile(),
