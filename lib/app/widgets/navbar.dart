@@ -1,4 +1,5 @@
 import 'package:fit_ai_mobile/app/screens/gopro.dart';
+import 'package:fit_ai_mobile/app/screens/progress.dart';
 import 'package:flutter/material.dart';
 import 'package:fit_ai_mobile/app/screens/home.dart';
 import 'package:fit_ai_mobile/app/screens/profile.dart';
@@ -70,6 +71,22 @@ class Navbar extends StatelessWidget {
 
               Navigator.of(context).pushReplacement(MaterialPageRoute(
                   builder: (BuildContext context) => Gopro()));
+            },
+          ),
+          ListTile(
+            title: Text(Progress.title,
+                style: currentDrawer == 0
+                    ? TextStyle(fontWeight: FontWeight.bold)
+                    : TextStyle(fontWeight: FontWeight.normal)),
+            trailing: Icon(Icons.arrow_forward),
+            onTap: () {
+              Navigator.of(context).pop();
+              if (this.currentPage == "Progress") return;
+
+              Provider.of<DrawerStateInfo>(context).setCurrentDrawer(0);
+
+              Navigator.of(context).pushReplacement(MaterialPageRoute(
+                  builder: (BuildContext context) => Progress()));
             },
           ),
           ListTile(
