@@ -30,8 +30,11 @@ class _ProgressState extends State<Progress>
   {
     return Scaffold
     (
-      appBar: AppBar(title: Text('Progress')),
-      drawer: Navbar("Home"),
+      backgroundColor: Colors.grey.shade900,
+      appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          title: Text('Dashboard')),
       body: StaggeredGridView.count(
         crossAxisCount: 2,
         crossAxisSpacing: 12.0,

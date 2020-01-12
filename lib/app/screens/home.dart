@@ -12,7 +12,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade900,
+      backgroundColor: Colors.white,
       appBar: AppBar(
           backgroundColor: Colors.transparent,
           elevation: 0,
@@ -109,6 +109,7 @@ class Home extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           ListTile(
+                            
                             title: Text(
                               "+5%",
                               style: Theme.of(context)

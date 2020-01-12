@@ -8,8 +8,11 @@ class Gopro extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('FitAIMobile')),
-      drawer: Navbar("Gopro"),
+       backgroundColor: Colors.grey.shade900,
+      appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          title: Text('Go pro')),
       body: Center(
         child: Container(
           child: Center(
