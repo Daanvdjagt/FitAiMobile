@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:fit_ai_mobile/app/screens/home.dart';
 import 'package:fit_ai_mobile/app/screens/login.dart';
 import 'package:fit_ai_mobile/app/screens/profile.dart';
+import 'package:fit_ai_mobile/app/screens/daily.dart';
 import 'package:splashscreen/splashscreen.dart';
 import 'package:provider/provider.dart';
 import 'package:fit_ai_mobile/app/viewmodel/drawerstateinfo.dart';
@@ -55,6 +56,7 @@ class AfterSplash extends StatelessWidget {
           Home.id: (context) => Home(),
           Login.id: (context) => Login(),
           Profile.id: (context) => Profile(),
+          Daily.id: (context) => Daily(),
         }),
         providers: <SingleChildCloneableWidget>[
           ChangeNotifierProvider<DrawerStateInfo>(
