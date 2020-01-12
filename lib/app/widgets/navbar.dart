@@ -12,12 +12,15 @@ class Navbar extends StatelessWidget {
   Widget build(BuildContext context) {
     var currentDrawer = Provider.of<DrawerStateInfo>(context).getCurrentDrawer;
     return Drawer(
+      
       child: ListView(
         children: <Widget>[
           UserAccountsDrawerHeader(
+            decoration: BoxDecoration(color: Colors.grey.shade900),
               accountName: Text("Jane Doe"),
               accountEmail: Text("JaneDoe1995@gmail.com"),
               currentAccountPicture: CircleAvatar(
+                foregroundColor: Colors.grey.shade900,
                 backgroundColor: Colors.white,
                 child: Text(
                   "A",
