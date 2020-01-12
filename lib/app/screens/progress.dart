@@ -34,7 +34,7 @@ class _ProgressState extends State<Progress>
       appBar: AppBar(
           backgroundColor: Colors.transparent,
           elevation: 0,
-          title: Text('Dashboard')),
+          title: Text('Progress')),
       body: StaggeredGridView.count(
         crossAxisCount: 2,
         crossAxisSpacing: 12.0,

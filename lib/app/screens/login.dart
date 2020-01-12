@@ -13,7 +13,7 @@ class Login extends StatelessWidget {
       appBar: AppBar(
           backgroundColor: Colors.transparent,
           elevation: 0,
-          title: Text('Dashboard')),
+          title: Text('Login')),
       body: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,

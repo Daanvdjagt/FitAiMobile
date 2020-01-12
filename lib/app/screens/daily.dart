@@ -18,7 +18,7 @@ class Daily extends StatelessWidget {
       appBar: AppBar(
           backgroundColor: Colors.transparent,
           elevation: 0,
-          title: Text('Dashboard')),
+          title: Text('Daily')),
       body: Center(
         child: RaisedButton(
           onPressed: () {
