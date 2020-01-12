@@ -35,6 +35,7 @@ class _ProgressState extends State<Progress>
           backgroundColor: Colors.transparent,
           elevation: 0,
           title: Text('Progress')),
+          drawer: Navbar("Home"),
       body: StaggeredGridView.count(
         crossAxisCount: 2,
         crossAxisSpacing: 12.0,

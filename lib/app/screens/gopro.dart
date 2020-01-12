@@ -13,6 +13,7 @@ class Gopro extends StatelessWidget {
           backgroundColor: Colors.transparent,
           elevation: 0,
           title: Text('Go pro')),
+          drawer: Navbar("Home"),
       body: Center(
         child: Container(
           child: Center(
