@@ -1,3 +1,4 @@
+import 'package:fit_ai_mobile/app/screens/progress.dart';
 import 'package:flutter/material.dart';
 import 'package:fit_ai_mobile/app/widgets/navbar.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -109,7 +110,10 @@ class Home extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
                           ListTile(
-                            
+                            onTap: () {
+                              Navigator.of(context).pushReplacement(MaterialPageRoute(
+                              builder: (BuildContext context) => Progress()));
+                             },
                             title: Text(
                               "+5%",
                               style: Theme.of(context)
