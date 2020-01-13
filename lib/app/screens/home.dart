@@ -4,7 +4,6 @@ import 'package:fit_ai_mobile/app/widgets/navbar.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:fit_ai_mobile/app/screens/daily.dart';
 
-
 class Home extends StatelessWidget {
   static const String id = 'home_screen';
   static const String title = "Home";
@@ -103,37 +102,39 @@ class Home extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Container(
-                      height: 120,
-                      color: Colors.orange.shade900,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          ListTile(
-                            onTap: () {
-                              Navigator.of(context).pushReplacement(MaterialPageRoute(
-                              builder: (BuildContext context) => Progress()));
-                             },
-                            title: Text(
-                              "+5%",
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .display1
-                                  .copyWith(color: Colors.green),
+                    InkWell(
+                      onTap: () {
+                        Navigator.of(context).pushReplacement(MaterialPageRoute(
+                            builder: (BuildContext context) => Progress()));
+                      },
+                      child: Container(
+                        height: 120,
+                        color: Colors.orange.shade900,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            ListTile(
+                              title: Text(
+                                "+5%",
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .display1
+                                    .copyWith(color: Colors.green),
+                              ),
+                              trailing: Icon(
+                                FontAwesomeIcons.dumbbell,
+                                color: Colors.white,
+                              ),
                             ),
-                            trailing: Icon(
-                              FontAwesomeIcons.dumbbell,
-                              color: Colors.white,
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.only(left: 16.0),
-                            child: Text(
-                              'Monthly progress',
-                              style: whiteText,
-                            ),
-                          )
-                        ],
+                            Padding(
+                              padding: const EdgeInsets.only(left: 16.0),
+                              child: Text(
+                                'Monthly progress',
+                                style: whiteText,
+                              ),
+                            )
+                          ],
+                        ),
                       ),
                     ),
                     const SizedBox(height: 10),

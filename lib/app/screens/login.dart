@@ -45,12 +45,17 @@ class Login extends StatelessWidget {
                         borderRadius: BorderRadius.all(Radius.circular(50.0)),
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: Image.network('https://static.vecteezy.com/system/resources/previews/000/595/164/large_2x/vector-object-and-icons-for-sport-label-gym-badge-fitness-logo-design.jpg',width: 80,height:80,),
+                          child: Image.network(
+                            'https://static.vecteezy.com/system/resources/previews/000/595/164/large_2x/vector-object-and-icons-for-sport-label-gym-badge-fitness-logo-design.jpg',
+                            width: 80,
+                            height: 80,
+                          ),
                         )),
                     new Text(
-          'Welcome to FitAi',
-          style: new TextStyle(fontWeight: FontWeight.bold, fontSize: 20.0),
-        ),
+                      'Welcome to FitAi',
+                      style: new TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 20.0),
+                    ),
                     CustomInputField(
                         Icon(Icons.person, color: Colors.white), 'Username'),
                     CustomInputField(
@@ -58,15 +63,20 @@ class Login extends StatelessWidget {
                     Container(
                       width: 150,
                       child: RaisedButton(
-                        onPressed: (){
-                           Navigator.push(context, MaterialPageRoute(builder: (context) => Home()));
-                           },
-                           color: Colors.deepOrange,
-                           textColor: Colors.white,
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(10.0))),
-                        child: Text('Login',
-                        style: TextStyle(
-                            fontSize: 20.0),),),
+                        onPressed: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => Home()));
+                        },
+                        color: Colors.deepOrange,
+                        textColor: Colors.white,
+                        shape: RoundedRectangleBorder(
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(10.0))),
+                        child: Text(
+                          'Login',
+                          style: TextStyle(fontSize: 20.0),
+                        ),
+                      ),
                     )
                   ],
                 ),

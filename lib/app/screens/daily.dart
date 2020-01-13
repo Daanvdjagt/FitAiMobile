@@ -1,12 +1,9 @@
-
 import 'package:fit_ai_mobile/app/screens/home.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui' as ui;
 import 'package:fit_ai_mobile/app/widgets/navbar.dart';
 import 'package:fit_ai_mobile/app/widgets/rowcell.dart';
 import 'package:fit_ai_mobile/app/widgets/custominputfield.dart';
-
-
 
 class Daily extends StatelessWidget {
   static const String id = 'daily_screen';
@@ -22,10 +19,10 @@ class Daily extends StatelessWidget {
       body: Center(
         child: RaisedButton(
           onPressed: () {
-             Navigator.push(context, MaterialPageRoute(builder: (context) => Home()));
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => Home()));
           },
           child: Text('Go back!'),
-
         ),
       ),
       drawer: Navbar(""),

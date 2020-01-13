@@ -14,11 +14,10 @@ class Navbar extends StatelessWidget {
   Widget build(BuildContext context) {
     var currentDrawer = Provider.of<DrawerStateInfo>(context).getCurrentDrawer;
     return Drawer(
-      
       child: ListView(
         children: <Widget>[
           UserAccountsDrawerHeader(
-            decoration: BoxDecoration(color: Colors.grey.shade900),
+              decoration: BoxDecoration(color: Colors.grey.shade900),
               accountName: Text("Jane Doe"),
               accountEmail: Text("JaneDoe1995@gmail.com"),
               currentAccountPicture: CircleAvatar(
@@ -26,7 +25,7 @@ class Navbar extends StatelessWidget {
                 backgroundColor: Colors.white,
                 child: Text(
                   "A",
-                  style: currentDrawer == 1
+                  style: currentDrawer == 0
                       ? TextStyle(fontSize: 40.0, fontWeight: FontWeight.bold)
                       : TextStyle(
                           fontSize: 40.0, fontWeight: FontWeight.normal),
@@ -36,14 +35,14 @@ class Navbar extends StatelessWidget {
                 Navigator.of(context).pop();
                 if (this.currentPage == "Profile") return;
 
-                Provider.of<DrawerStateInfo>(context).setCurrentDrawer(1);
+                Provider.of<DrawerStateInfo>(context).setCurrentDrawer(0);
 
                 Navigator.of(context).pushReplacement(MaterialPageRoute(
                     builder: (BuildContext context) => Profile()));
               }),
           ListTile(
             title: Text(Home.title,
-                style: currentDrawer == 0
+                style: currentDrawer == 1
                     ? TextStyle(fontWeight: FontWeight.bold)
                     : TextStyle(fontWeight: FontWeight.normal)),
             trailing: Icon(Icons.arrow_forward),
@@ -51,15 +50,15 @@ class Navbar extends StatelessWidget {
               Navigator.of(context).pop();
               if (this.currentPage == "Home") return;
 
-              Provider.of<DrawerStateInfo>(context).setCurrentDrawer(0);
+              Provider.of<DrawerStateInfo>(context).setCurrentDrawer(1);
 
-              Navigator.of(context).pushReplacement(MaterialPageRoute(
-                  builder: (BuildContext context) => Home()));
+              Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(builder: (BuildContext context) => Home()));
             },
           ),
           ListTile(
             title: Text(Gopro.title,
-                style: currentDrawer == 0
+                style: currentDrawer == 2
                     ? TextStyle(fontWeight: FontWeight.bold)
                     : TextStyle(fontWeight: FontWeight.normal)),
             trailing: Icon(Icons.arrow_forward),
@@ -67,31 +66,15 @@ class Navbar extends StatelessWidget {
               Navigator.of(context).pop();
               if (this.currentPage == "Gopro") return;
 
-              Provider.of<DrawerStateInfo>(context).setCurrentDrawer(0);
+              Provider.of<DrawerStateInfo>(context).setCurrentDrawer(2);
 
               Navigator.of(context).pushReplacement(MaterialPageRoute(
                   builder: (BuildContext context) => Gopro()));
             },
           ),
           ListTile(
-            title: Text(Progress.title,
-                style: currentDrawer == 0
-                    ? TextStyle(fontWeight: FontWeight.bold)
-                    : TextStyle(fontWeight: FontWeight.normal)),
-            trailing: Icon(Icons.arrow_forward),
-            onTap: () {
-              Navigator.of(context).pop();
-              if (this.currentPage == "Progress") return;
-
-              Provider.of<DrawerStateInfo>(context).setCurrentDrawer(0);
-
-              Navigator.of(context).pushReplacement(MaterialPageRoute(
-                  builder: (BuildContext context) => Progress()));
-            },
-          ),
-          ListTile(
             title: Text('Version 0.1',
-                style: currentDrawer == 2
+                style: currentDrawer == 3
                     ? TextStyle(fontWeight: FontWeight.bold)
                     : TextStyle(fontWeight: FontWeight.normal)),
             onTap: () {

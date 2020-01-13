@@ -8,43 +8,38 @@ class Gopro extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       backgroundColor: Colors.grey.shade900,
+      backgroundColor: Colors.grey.shade900,
       appBar: AppBar(
           backgroundColor: Colors.transparent,
           elevation: 0,
           title: Text('Go pro')),
-          drawer: Navbar("Home"),
+      drawer: Navbar("Home"),
       body: Center(
         child: Container(
           child: Center(
-            child: Text(
-            "Upgrade to pro to get the most of the app!",
-            textAlign: TextAlign.center,
-            overflow: TextOverflow.ellipsis,
-            style: TextStyle(fontWeight: FontWeight.bold)
-            ),
+            child: Text("Upgrade to pro to get the most of the app!",
+                textAlign: TextAlign.center,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(fontWeight: FontWeight.bold)),
           ),
-          width: 300, 
+          width: 300,
           height: 400,
           decoration: BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.circular(8.0)),
-          boxShadow: [
-            BoxShadow(
-            color: Colors.grey,
-            blurRadius: 20.0,
-            spreadRadius: 5.0,     
-            )
-          ],
-          color: Colors.white,
-          border: Border.all(
-            width: 1.0,
-            color: Colors.grey,
-            )
-          
-          ),
-        )
-      ,),
-      
+              borderRadius: BorderRadius.all(Radius.circular(8.0)),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey,
+                  blurRadius: 20.0,
+                  spreadRadius: 5.0,
+                )
+              ],
+              color: Colors.white,
+              border: Border.all(
+                width: 1.0,
+                color: Colors.grey,
+              )),
+        ),
+      ),
     );
   }
 }
