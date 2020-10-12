@@ -76,3 +76,4 @@ pubspec.lock
 pubspec.lock
 .vscode/launch.json
 ios/Runner.xcodeproj/project.pbxproj
+test/widget_test.dart
